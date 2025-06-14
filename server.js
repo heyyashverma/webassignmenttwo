@@ -15,11 +15,12 @@
 const express = require("express");
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
+const path = require('path');
 
 const projectData = require("./modules/projects"); // Ensure this path is correct
 
 // Serve static files from the 'public' directory 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 projectData.initialize()
     .then(() => {
