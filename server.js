@@ -8,7 +8,7 @@
 *
 * Name: Yash Verma Student ID: 166404236 Date: 9-6-25
 *
-* Published URL: https://weblab3-8w1yt260h-heyyashvermas-projects.vercel.app
+* Published URL: https://webassignmenttwo.vercel.app/
 *
 ********************************************************************************/
 
