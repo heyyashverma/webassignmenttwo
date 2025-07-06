@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Climate Solutions</title>
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body class="bg-base-200">
+
+  <!-- Navbar Partial Include -->
+  <%- include('partials/navbar', { page: '/about' }) %>
+
+  <!-- Hero -->
+  <div class="hero min-h-[60vh] bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">About Me</h1>
+        <p class="py-6">All about me and my interests!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Grid -->
+  <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <img src="https://placehold.co/400x300?text=Yash+Verma" alt="Me" class="rounded-lg shadow-md" />
+    </div>
+    <div>
+      <h2 class="text-2xl font-bold mb-4">Hi, I'm Yash!</h2>
+      <p>
+        I’m currently studying Web Development. I enjoy building full-stack applications, learning new tools like Node.js, and solving real-world problems through code.
+        In my free time, I also love photography and video editing.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
