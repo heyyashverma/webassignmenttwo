@@ -7,23 +7,19 @@
   <link href="/css/main.css" rel="stylesheet" />
 </head>
 <body class="bg-base-200">
-
-  <!-- Navbar Partial Include -->
   <%- include('partials/navbar', { page: '/' }) %>
-
-  <div class="hero min-h-[60vh] bg-base-200">
-    <div class="hero-content text-center">
-      <div class="max-w-md">
-        <h1 class="text-5xl font-bold">Explore Climate Projects</h1>
-        <p class="py-6">Discover innovative solutions making a real difference.</p>
-        <a href="/solutions/projects" class="btn btn-primary">View Projects</a>
+  <main class="container mx-auto px-4 py-8">
+    <div class="hero min-h-[60vh] bg-base-200">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Explore Climate Projects</h1>
+          <p class="py-6">Discover innovative solutions making a real difference.</p>
+          <a href="/solutions/projects" class="btn btn-primary">View Projects</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="container mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <!-- Cards here (unchanged) -->
       <div class="card bg-base-100 shadow-xl">
         <figure><img src="https://drawdown.org/sites/default/files/solutions/solution_farmlandrestoration01.jpg" alt="Abandoned Farmland Restoration" /></figure>
         <div class="card-body">
@@ -34,7 +30,6 @@
           </div>
         </div>
       </div>
-
       <div class="card bg-base-100 shadow-xl">
         <figure><img src="https://drawdown.org/sites/default/files/solutions2020/solution_alternativecement02.jpg" alt="Alternative Cement" /></figure>
         <div class="card-body">
@@ -45,7 +40,6 @@
           </div>
         </div>
       </div>
-
       <div class="card bg-base-100 shadow-xl">
         <figure><img src="https://drawdown.org/sites/default/files/solutions2020/solution_bicycle_infrastructure.jpg" alt="Bicycle Infrastructure" /></figure>
         <div class="card-body">
@@ -56,9 +50,7 @@
           </div>
         </div>
       </div>
-
     </div>
-  </div>
-
+  </main>
 </body>
 </html>

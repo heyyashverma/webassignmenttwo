@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Project</title>
+  <link href="/css/main.css" rel="stylesheet">
+</head>
+<body class="bg-base-200">
+
+  <!-- Include navbar partial -->
+  <%- include('partials/navbar', { page: '/solutions/addproject' }) %>
+
+  <div class="max-w-2xl mx-auto mt-10 p-6 bg-base-100 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-6">Add New Project</h1>
+
+    <form action="/solutions/addProject" method="POST" class="space-y-4">
+
+      <div>
+        <label class="label">
+          <span class="label-text">Project Title</span>
+        </label>
+        <input type="text" name="title" class="input input-bordered w-full" required>
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text">Feature Image URL</span>
+        </label>
+        <input type="text" name="feature_img_url" class="input input-bordered w-full">
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text">Short Summary</span>
+        </label>
+        <textarea name="summary_short" class="textarea textarea-bordered w-full" required></textarea>
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text">Short Introduction</span>
+        </label>
+        <textarea name="intro_short" class="textarea textarea-bordered w-full"></textarea>
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text">Impact</span>
+        </label>
+        <textarea name="impact" class="textarea textarea-bordered w-full"></textarea>
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text">Original Source URL</span>
+        </label>
+        <input type="text" name="original_source_url" class="input input-bordered w-full">
+      </div>
+
+      <div>
+        <label class="label">
+          <span class="label-text">Select Sector</span>
+        </label>
+        <select name="sector_id" class="select select-bordered w-full" required>
+          <% sectors.forEach(sector => { %>
+            <option value="<%= sector.id %>"><%= sector.sector_name %></option>
+          <% }) %>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-full mt-4">Add Project</button>
+    </form>
+  </div>
+</body>
+</html>
