@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User History</title>
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body class="bg-base-200 min-h-screen">
+  <%- include('partials/navbar') %>
+  <main class="py-8">
+    <section class="w-full max-w-2xl mx-auto">
+      <h2 class="text-xl font-bold mb-2 text-center">User History</h2>
+      <div class="text-center text-sm mb-4">
+        <span class="font-semibold"><%= session.user.userName %></span> &bull; <span class="font-semibold"><%= session.user.email %></span>
+      </div>
+      <div class="overflow-x-auto rounded border border-base-300 bg-white w-full">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-base-100 text-base-content border-b border-base-200">
+              <th class="py-2 px-3 font-semibold text-left">Login Date/Time</th>
+              <th class="py-2 px-3 font-semibold text-left">Client Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% session.user.loginHistory.forEach(function(entry){ %>
+            <tr class="border-b border-base-200 last:border-0">
+              <td class="py-2 px-3"><%= entry.dateTime %></td>
+              <td class="py-2 px-3"><%= entry.userAgent %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

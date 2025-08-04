@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Log In</title>
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body class="bg-base-200 min-h-screen">
+  <%- include('partials/navbar') %>
+  <main class="flex flex-col items-center justify-center min-h-[80vh] px-2">
+    <div class="w-full max-w-2xl bg-gray-900 rounded-xl p-8 mt-8">
+      <h2 class="text-5xl font-bold text-center mb-2 text-gray-200">Log In</h2>
+      <p class="text-center text-gray-400 mb-8">Please provide your credentials below</p>
+      <form method="POST" action="/login" class="space-y-6">
+        <% if(errorMessage){ %>
+        <div class="font-bold text-center mb-4">
+          <%= errorMessage %>
+        </div>
+        <% } %>
+        <div class="mb-4">
+          <label class="block mb-1 text-gray-400" for="userName">User Name</label>
+          <input type="text" id="userName" name="userName" placeholder="User Name" value="<%= userName %>" required class="input input-bordered w-full bg-base-200 text-gray-100" />
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1 text-gray-400" for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Password" required class="input input-bordered w-full bg-base-200 text-gray-100" />
+        </div>
+        <button type="submit" class="btn btn-success w-fit px-8 mb-2">Login</button>
+      </form>
+      <div class="mt-6 text-center text-sm text-gray-400">
+        Don't have an account? <a href="/register" class="text-success font-semibold hover:underline">Register</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
