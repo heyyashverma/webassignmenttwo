@@ -1,12 +1,12 @@
 /********************************************************************************
-* WEB322 – Assignment 04
+* WEB322 – Assignment 06
 *
 * I declare that this assignment is my own work in accordance with Seneca's
 * Academic Integrity Policy:
 *
 * https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
 *
-* Name: Yash Verma Student ID: 166404236 Date: 30-6-25
+* Name: Yash Verma Student ID: 166404236 Date: 04-08-25
 *
 * Published URL: https://webassignmenttwo.vercel.app/
 *
